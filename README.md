@@ -36,7 +36,6 @@ reload()
  // recompiles all the changed files
 update()
 
-
 // after reload you can 
 // to get a queue of changes which will be performed in update(), ideally this is where you broadcast an event that a file has changed
 getChanges() -> std::deque<std::string>
@@ -46,4 +45,4 @@ getChanges() -> std::deque<std::string>
 
 **NOTE**: code might change with need, the basic idea is here, some abstractions may help like auto adding src and obj files. The API may also change (only the naming, not the functionality)
 
-If you have any suggestions, additional features that you may want, please reach out, I am open to feed back
+If you have any suggestions, additional features that you may want, please reach out, I am open to feedback
