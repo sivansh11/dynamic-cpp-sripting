@@ -22,6 +22,10 @@ then register and add includes thru
 addIncludePath(const char *includePath) (adds the include folder of the script)
 registerSrcAndObj(const char *srcFilePath, const char *objFilePath) (registers the script src location and the respective shared obj location) (this can donr be automatized thru an abstraction layer/function, done this way to not restrict anyone)
 
+now you can use 
+
+getFunction(const char *objFilePath, const char *functionName) -> void* (returns the address of the function)
+Note: it returns a void* (so you may need to typedef your functions)
 
 then every frame (ideally on a seperate thread)
 
@@ -38,5 +42,6 @@ NOTE: code might change with need, the basic idea is here, some abstractions may
 
 
 If you have any sugestions, additional features that you may want, please reach out, I am open to feed back
+
 
 
