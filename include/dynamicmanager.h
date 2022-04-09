@@ -5,7 +5,10 @@
 #include <unordered_map>
 #include <vector>
 #include <deque>
-// todo add windows support
+// todo add windows support in window.h 
+// will get to adding this in the next week
+
+// currently only supports linux
 #include <dlfcn.h>
 
 #include "filewatcher.h"
