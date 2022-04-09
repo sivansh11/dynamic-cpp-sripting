@@ -41,7 +41,7 @@ NOTE: currently linux only, window support is coming soon.
 NOTE: code might change with need, the basic idea is here, some abstractions may help like auto adding src and obj files. The API may also change (only the naming, not the functionality)
 
 
-If you have any sugestions, additional features that you may want, please reach out, I am open to feed back
+If you have any sugestions, additional features that you may want, please reach out, I am open to feedback
 
 
 
