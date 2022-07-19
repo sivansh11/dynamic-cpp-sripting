@@ -1,25 +1,40 @@
 #ifndef FILEWATCHER_H
 #define FILEWATCHER_H
 
-#include <string>
-#include <unordered_map>
+#include <experimental/filesystem>
 
-namespace ds
+#include "event.h"
+
+class FileChangeEvent : public Event
 {
-    class FileWatcher
-    {
-    public:
-        FileWatcher(const char *filePath);
+public:
+    FileChangeEvent(const char *filePath) : filePath(filePath), Event("FILE_CHANGE") {}
+    std::string filePath;
+};
 
-        void check();
-        bool isChanged() { return m_isChanged; }
-        
-        std::string filePath;
-    private:
-        bool m_isChanged = false;
-        std::string fileHash;
-    };
-} // namespace ds
+class FileWatcher
+{
+public:
+    FileWatcher(const char *filePath) : filePath(filePath) 
+    {
+        lastWrite = std::experimental::filesystem::last_write_time(filePath);
+    }
+
+    bool hasChanged()
+    {
+        std::experimental::filesystem::v1::file_time_type newWrite = std::experimental::filesystem::last_write_time(filePath);
+        if (newWrite != lastWrite)
+        {
+            lastWrite = newWrite;
+            return true;
+        }
+        return false;
+    }
+
+    std::string filePath;
+private:
+    std::experimental::filesystem::v1::file_time_type lastWrite;
+};
 
 
 #endif

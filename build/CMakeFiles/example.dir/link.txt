@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/example.dir/example/example.cpp.o CMakeFiles/example.dir/src/dynamicmanager.cpp.o  -o example  -ldl -lstdc++fs 

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/sivansh/programming/c++/dynamic-cpp-sripting/build",
+  "command": "/usr/bin/g++   -I/home/sivansh/programming/c++/dynamic-cpp-sripting/include  -g   -o CMakeFiles/example.dir/example/example.cpp.o -c /home/sivansh/programming/c++/dynamic-cpp-sripting/example/example.cpp",
+  "file": "/home/sivansh/programming/c++/dynamic-cpp-sripting/example/example.cpp"
+},
+{
+  "directory": "/home/sivansh/programming/c++/dynamic-cpp-sripting/build",
+  "command": "/usr/bin/g++   -I/home/sivansh/programming/c++/dynamic-cpp-sripting/include  -g   -o CMakeFiles/example.dir/src/dynamicmanager.cpp.o -c /home/sivansh/programming/c++/dynamic-cpp-sripting/src/dynamicmanager.cpp",
+  "file": "/home/sivansh/programming/c++/dynamic-cpp-sripting/src/dynamicmanager.cpp"
+}
+]

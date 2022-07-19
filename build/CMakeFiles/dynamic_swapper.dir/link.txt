@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdynamic_swapper.a  CMakeFiles/dynamic_swapper.dir/src/dynamicmanager.cpp.o
+/usr/bin/ranlib libdynamic_swapper.a

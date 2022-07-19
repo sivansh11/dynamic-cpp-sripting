@@ -3,8 +3,10 @@ project(dynamic_swapper)
 
 file(GLOB PROJECT_SRC src/*.cpp)
 
-add_library(dynamic_swapper ${PROJECT_SRC})
-target_include_directories(dynamic_swapper PUBLIC include/)
-target_link_libraries(${PROJECT_NAME}
+add_executable(example example/example.cpp ${PROJECT_SRC})
+
+target_include_directories(example PUBLIC include/)
+target_link_libraries(example
     dl
+    stdc++fs
 )

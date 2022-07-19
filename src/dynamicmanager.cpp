@@ -21,7 +21,7 @@ namespace ds
     bool DynamicManager::registerSrcAndObj(const char *srcFilePath, const char *objFilePath)
     {
         // loadedLibs[objFilePath] = {handle, srcFilePath};
-
+        objToData[objFilePath] = {nullptr, srcFilePath};
         srcToObj[srcFilePath] = objFilePath;
         watchList.push_back(srcFilePath);
         watchers.push_back({srcFilePath});
@@ -61,8 +61,7 @@ namespace ds
         changedQueue.clear();
         for (auto& watcher: watchers)
         {
-            watcher.check();
-            if (watcher.isChanged())
+            if (watcher.hasChanged())
             {
                 changedQueue.push_back(watcher.filePath);
             }

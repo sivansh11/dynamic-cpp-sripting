@@ -1,0 +1,3 @@
+/home/sivansh/programming/c++/dynamic-cpp-sripting/build/CMakeFiles/rebuild_cache.dir
+/home/sivansh/programming/c++/dynamic-cpp-sripting/build/CMakeFiles/edit_cache.dir
+/home/sivansh/programming/c++/dynamic-cpp-sripting/build/CMakeFiles/example.dir
